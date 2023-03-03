@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #333;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.todo__app {
+  background-color: #222;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  height: 85%;
+  overflow: hidden;
+}
+.todo__header {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10px;
+}
+.todo__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.todo__form input[type="text"] {
+  border: none;
+  outline-color: #1d4289;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.todo__form input[type="submit"] {
+  width: 30%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  background-color: #41b6e6;
+  color: #ffffff;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.todo__form input[type="submit"]:hover {
+  background-color: #7da1c4;
+}
+
+.show {
+  padding: 20px 10px;
+  padding-bottom: 0;
+  display: block;
+  background-color: #ddffdd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-left: 5px solid #04aa6d;
+}
+.delete {
+  padding: 20px 10px;
+  display: block;
+  background-color: #ffdddd;
+  border-left: 5px solid #f44336;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+.todo__list {
+  margin: 20px 10px;
+  height: 47vh;
+  overflow: auto;
+}
+.todo__list li {
+  color: #fff;
+  background-color: #333;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo__list li:hover {
+  background-color: #111;
+}
+.fa-trash {
+  background-color: #1d4289;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.fa-trash:hover {
+  background-color: #d3273e;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .todo__app {
+    width: 80%;
+  }
+  .todo__form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .todo__form input[type="text"] {
+    width: 65%;
+    margin: 0;
+  }
+  .todo__form input[type="submit"] {
+    width: 30%;
+  }
+}
+small {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+}
+small a {
+  color: #0aa2c0;
+  text-decoration: none;
+  font-weight: 600;
+  transition-duration: 0.2s;
+  line-height: 1.5;
+}
+small a:hover {
+  color: #3dd5f3;
+}
+@media screen and (min-width: 992px) {
+  .todo__app {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .todo__app {
+    width: 50%;
+  }
+}
